@@ -1,0 +1,24 @@
+How to launch the object tracker?
+
+If you want GUI:
+    
+	$ python2 objecttracker.py objecttracker.yml on
+
+Else, you prefer to save the results as .jpg images:
+	
+	$ python2 objecttracker.py objecttracker.yml off
+
+Modify the configuration file (.yml) accordingly.
+ - Tensorflow and Keras support (Network->Framework).
+ - The available sources are: 
+	- a locally saved video (ObjectTracker->Source->Video). Change the video path to your video (Video->Path)
+	- local saved images (ObjectTracker->Source->Images). Change the images path (Images->Path)
+	- live video from camera using OpenCV (ObjectTracker->Source->Local)
+	- ROS stream using usb_cam driver (ObjectTracker->Source->Stream)
+
+To use the ROS stream you need to launch the usb_cam node in another terminal:
+
+	$ roslaunch usb_cam.launch
+
+When using the application with a local video you can now select if you want or not to use the logging option: ObjectTracker->Logger->Status->on/off
+

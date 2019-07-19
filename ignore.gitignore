@@ -1,0 +1,12 @@
+*.pb
+*.h5
+*ckpt*
+*.pyc
+*.pyo
+*.proto
+*.pbtxt
+*.config
+
+!**/__pycache__/
+
+
